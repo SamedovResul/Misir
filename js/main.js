@@ -1,41 +1,51 @@
 const text = document.querySelectorAll('.text')
 const question = document.querySelector('.question')
-const questionArray = ['Ən böyük piramida hansı firon üçün ucaldılıb?']
-question.innerHTML = questionArray
+const questionArray = ['Ən böyük piramida hansı firon üçün ucaldılıb?', 'Qədim Misirin ərazisinidən hansı çay axırdı?' , 'Qədim Misirdə hansı heyvan müqəddəs hesab olunurdu?']
+
 const answerArray = {
     One:[ 'Xeops', 'Tutanxamon','Kleopatra' ,'Amenhotep'],
-    Two:[ 'Xeops', 'Tutanxamon','Kleopatra' ,'Amenhotep'],
-    Three:[ 'Xeops', 'Tutanxamon','Kleopatra' ,'Amenhotep'],
+    Two:[ 'Kür', 'Nil','Amazon' ,'Araz'],
+    Three:[ 'İt', 'Qurbağa','Pişik' ,'At'],
+}
+	
+	let random = Math.floor(Math.random() * questionArray.length);
+	console.log(random)
+for (let i = 0; i < questionArray.length; i++) {
+	question.innerHTML = questionArray[random]
+	
+	
 }
 
+console.log(random)
 
 const questions =   Math.floor(Math.random() * 3);
 console.log()
 let answer = 0
 let trueAnswer;
 for (let i = 0; i < text.length; i++) {
-    console.log(text[i])
-    if(0 == questions){
+    console.log(random.length)
+    if(questionArray[random] === questionArray[0]){
         text[0].innerHTML = answerArray.One[0]
         text[1].innerHTML = answerArray.One[1]
         text[2].innerHTML = answerArray.One[2]
         text[3].innerHTML = answerArray.One[3]
         trueAnswer = "Xeops" 
-    }else if(1 == questions){
+    }else if(questionArray[random] === questionArray[1]){
         text[0].innerHTML = answerArray.Two[0]
         text[1].innerHTML = answerArray.Two[1]
         text[2].innerHTML = answerArray.Two[2]
         text[3].innerHTML = answerArray.Two[3]
-        trueAnswer = "Xeops" 
-    }else if(2 == questions){
+        trueAnswer = "Nil" 
+    }else if(questionArray[random] === questionArray[2]){
         text[0].innerHTML = answerArray.Three[0]
         text[1].innerHTML = answerArray.Three[1]
         text[2].innerHTML = answerArray.Three[2]
         text[3].innerHTML = answerArray.Three[3]
-        trueAnswer = "Xeops"
+        trueAnswer = "Pisik"
     }
 }
 let value;
+console
 trueAnswercss = 
 $(document).ready(function () {
     $(".quiz-option").click(function () {

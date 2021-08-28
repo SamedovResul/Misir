@@ -21,13 +21,11 @@ body {
 }
 
 .game {
-  padding-top: 20%;
   transform-style: preserve-3d;
   perspective: 500px;
   min-height: 100%;
   height: 100%;
 }
-
 
 @media(max-width:991px) {
   .game {
@@ -37,7 +35,7 @@ body {
 
 @media(max-width:768px) {
   .game {
-    padding-top: 20%;
+    padding-top: 15%;
   }
 }
 
@@ -46,7 +44,6 @@ body {
     padding-top: 50%;
   }
 }
-
 
 @keyframes matchAnim {
   0% {
