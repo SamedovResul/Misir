@@ -41,7 +41,7 @@ for (let i = 0; i < text.length; i++) {
         text[1].innerHTML = answerArray.Three[1]
         text[2].innerHTML = answerArray.Three[2]
         text[3].innerHTML = answerArray.Three[3]
-        trueAnswer = "Pisik"
+        trueAnswer = "Pişik"
     }
 }
 let value;
